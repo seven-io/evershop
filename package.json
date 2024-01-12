@@ -1,0 +1,30 @@
+{
+  "name": "@seven.io/evershop",
+  "version": "1.0.0",
+  "description": "A seven extension for EverShop.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seven-io/evershop"
+  },
+  "keywords": [
+    "EverShop seven",
+    "EverShop SMS"
+  ],
+  "author": "seven communications GmbH & Co. KG (https://www.seven.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seven-io/evershop/issues"
+  },
+  "homepage": "https://github.com/seven-io/evershop",
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "copyfiles": "^2.4.1"
+  },
+  "engines": {
+    "node": ">= 14.0.0"
+  },
+  "type": "module",
+  "scripts": {
+    "compile": "tsc && copyfiles -u 1 \"src/**/*.{graphql,scss,json}\" dist"
+  }
+}
