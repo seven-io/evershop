@@ -1,6 +1,8 @@
-# seven emailing for [EverShop](https://evershop.io/)
+<img alt='' src="https://www.seven.io/wp-content/uploads/Logo.svg" width="250" />
 
-A seven extension for EverShop. This extension is used to send SMS to customers.
+# seven extension for [EverShop](https://evershop.io/)
+
+This extension is used to send SMS to customers.
 
 > **Note**: This extension requires EverShop version 1.0.0-rc.6 or higher.
 
@@ -35,6 +37,10 @@ npm install @seven.io/evershop
   "seven": {
     "apiKey": "<Your seven API Key>",
     "events": {
+      "order_created": {
+        "enabled": true,
+        "text": "An order with ID {{order_id}} has been created for customer with email {{customer_email}}."
+      },
       "order_placed": {
         "enabled": true,
         "text": "An order with ID {{order_id}} has been placed for customer with email {{customer_email}}."
@@ -104,8 +110,8 @@ Below is the data you can use in your SMS template
   "billing_address_id": 4146,
   "shipment_status": "unfullfilled",
   "payment_status": "pending",
-  "created_at": 2023-07-06T06:17:53.560Z,
-  "updated_at": 2023-07-06T06:17:53.560Z,
+  "created_at": "2023-07-06T06:17:53.560Z",
+  "updated_at": "2023-07-06T06:17:53.560Z",
   "items": [
     {
     "order_item_id": 3127,
@@ -127,7 +133,7 @@ Below is the data you can use in your SMS template
     "discount_amount": "0.0000",
     "total": "250.0000",
     "variant_group_id": 82,
-    "variant_options": "[{"attribute_code":"color","attribute_name":"Color","attribute_id":3,"option_id":14,"option_text":"Black"},{"attribute_code":"size","attribute_name":"Size","attribute_id":2,"option_id":26,"option_text":"XL"}]",
+    "variant_options": [{"attribute_code":"color","attribute_name":"Color","attribute_id":3,"option_id":14,"option_text":"Black"},{"attribute_code":"size","attribute_name":"Size","attribute_id":2,"option_id":26,"option_text":"XL"}],
     "product_custom_options": null,
     "requested_data": null
     }
