@@ -52,10 +52,19 @@ npm install @seven.io/evershop
 ## Event-driven message dispatch
 
 ### order_placed
-This event is fired when a customer places an order. Send an email to confirm the order.
+This event is triggered when an order is placed. This event is triggered by the payment gateway. For example, with offline payment methods like COD, this event will be triggered when the order is created. With online payment gateways like Stripe or PayPal, this event will be triggered when the payment is successful.
+
+Sends an SMS to confirm the order.
+
+### order_created
+This event is triggered when an order is created.
+
+Sends an SMS to confirm the order.
 
 ### reset_password
-This event is fired when a customer requests to reset password. Send an email with a link to reset password.
+This event is fired when a customer requests to reset password.
+
+Sends an email with a link to reset password.
 
 ## SMS template data
 
