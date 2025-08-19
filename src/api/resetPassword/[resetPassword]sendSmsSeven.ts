@@ -33,7 +33,7 @@ export default async (request: EvershopRequest, response: EvershopResponse, next
     )}${url}?token=${token}`
 
     const params = {
-      text: text.replaceAll('{{reset_password_url}}', resetPasswordUrl), // TODO: replace placeholders
+      text: text.replaceAll('{{reset_password_url}}', resetPasswordUrl),
       to: email,
     }
       await new SevenClient().sms(params)
